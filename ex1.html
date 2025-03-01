@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Lab5 - Exercise 1</title>
+</head>
+<body>
+    <input type="text" id="textInput" placeholder="Type something
+here..."/>
+    <label id="textLabel"></label>
+    <button id="redButton">Red</button>
+    <button id="blueButton">Blue</button>
+    <button id="greenButton">Green</button>
+    <button id="orangeButton">Orange</button>
+    <button id="purpleButton">Purple</button>
+</body>
+<script type="text/javascript">
+    <!-- Your JavaScript code will go here -->
+    // Selecting an element
+    const redbutton = document.getElementById('redButton');
+    // Adding a click event listener
+    redbutton.addEventListener('click', () => {
+    document.getElementById('textLabel').style.color = 'red';
+    });
+
+    // Selecting an element
+    const bluebutton = document.getElementById('blueButton');
+    // Adding a click event listener
+    bluebutton.addEventListener('click', () => {
+    document.getElementById('textLabel').style.color = 'blue';
+    });
+
+    // Selecting an element
+    const greenbutton = document.getElementById('greenButton');
+    // Adding a click event listener
+    greenbutton.addEventListener('click', () => {
+    document.getElementById('textLabel').style.color = 'green';
+    });
+
+    // Selecting an element
+    const orangebutton = document.getElementById('orangeButton');
+    // Adding a click event listener
+    orangebutton.addEventListener('click', () => {
+    document.getElementById('textLabel').style.color = 'orange';
+    });
+
+    // Selecting an element
+    const purplebutton = document.getElementById('purpleButton');
+    // Adding a click event listener
+    purplebutton.addEventListener('click', () => {
+    document.getElementById('textLabel').style.color = 'purple';
+    });
+
+    const textLabel = document.getElementById("textLabel")
+    const textInput = document.getElementById("textInput");
+    textInput.addEventListener('keydown', (event) => {
+        if (event.key == 'Enter') {
+            textLabel.innerHTML = textInput.value;
+            textInput.value = "";
+        }
+    })
+</script>
+</html>
